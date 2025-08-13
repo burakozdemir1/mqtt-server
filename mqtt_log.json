@@ -1,0 +1,82 @@
+[
+  {
+    "topic": "stm32/demo",
+    "message": "{\r\n  \"rfid\": \"987654\",\r\n  \"level\": 23,\r\n  \"fill_time\": 1722974400,\r\n  \"level_time\": 1722974465,\r\n  \"location\": \"1. Kat - WC\",\r\n  \"deviceNo\": \"NVS-00123\",\r\n  \"coverTime\": 1722974472,\r\n  \"connectionState\": true\r\n}",
+    "time": "2025-08-07T17:01:43.269Z"
+  },
+  {
+    "topic": "stm32/demo",
+    "message": "{\r\n  \"rfid\": \"123456\",\r\n  \"level\": 55,\r\n  \"fill_time\": 1722974417,\r\n  \"level_time\": 1722974412,\r\n  \"location\": \"1. Kat - WC\",\r\n  \"deviceNo\": \"NVS-00123\",\r\n  \"coverTime\": 1722974472,\r\n  \"connectionState\": false\r\n}",
+    "time": "2025-08-07T17:35:29.546Z"
+  },
+  {
+    "topic": "stm32/demo",
+    "message": "{\r\n  \"rfid\": \"123456\",\r\n  \"level\": 55,\r\n  \"fill_time\": 1722974417,\r\n  \"level_time\": 1722974412,\r\n  \"location\": \"1. Kat - WC\",\r\n  \"deviceNo\": \"NVS-00123\",\r\n  \"coverTime\": 1722974472,\r\n  \"connectionState\": false\r\n}",
+    "time": "2025-08-07T17:35:32.082Z"
+  },
+  {
+    "topic": "stm32/demo",
+    "message": "{\r\n  \"rfid\": \"398765\",\r\n  \"level\": 55,\r\n  \"fill_time\": 1722974417,\r\n  \"level_time\": 1722974412,\r\n  \"location\": \"1. Kat - WC\",\r\n  \"deviceNo\": \"NVS-00123\",\r\n  \"coverTime\": 1722974472,\r\n  \"connectionState\": false\r\n}",
+    "time": "2025-08-07T17:35:52.173Z"
+  },
+  {
+    "topic": "stm32/demo",
+    "message": "{\r\n  \"rfid\": \"398765\",\r\n  \"level\": 17,\r\n  \"fill_time\": 1722974417,\r\n  \"level_time\": 1722974412,\r\n  \"location\": \"1. Kat - WC\",\r\n  \"deviceNo\": \"NVS-00123\",\r\n  \"coverTime\": 1722974472,\r\n  \"connectionState\": false\r\n}",
+    "time": "2025-08-07T17:36:10.136Z"
+  },
+  {
+    "topic": "stm32/demo",
+    "message": "{\r\n  \"rfid\": \"123456\",\r\n  \"level\": 86,\r\n  \"fill_time\": 1722974417,\r\n  \"level_time\": 1722974412,\r\n  \"location\": \"1. Kat - WC\",\r\n  \"deviceNo\": \"NVS-00123\",\r\n  \"coverTime\": 1722974472,\r\n  \"connectionState\": false\r\n}",
+    "time": "2025-08-07T17:37:09.644Z"
+  },
+  {
+    "topic": "stm32/demo",
+    "message": "{\r\n  \"rfid\": \"98765\",\r\n  \"level\": 99,\r\n  \"fill_time\": 1722974417,\r\n  \"level_time\": 1722974412,\r\n  \"location\": \"1. Kat - WC\",\r\n  \"deviceNo\": \"NVS-00123\",\r\n  \"coverTime\": 1722974472,\r\n  \"connectionState\": false\r\n}",
+    "time": "2025-08-07T17:37:16.576Z"
+  },
+  {
+    "topic": "stm32/demo",
+    "message": "{\r\n  \"rfid\": \"123456\",\r\n  \"level\": 10,\r\n  \"fill_time\": 1722974417,\r\n  \"level_time\": 1722974412,\r\n  \"location\": \"1. Kat - WC\",\r\n  \"deviceNo\": \"NVS-00123\",\r\n  \"coverTime\": 1722974472,\r\n  \"connectionState\": false\r\n}",
+    "time": "2025-08-07T17:37:24.722Z"
+  },
+  {
+    "topic": "stm32/demo",
+    "message": "{\r\n  \"rfid\": \"398765\",\r\n  \"level\": 38,\r\n  \"fill_time\": 1722974417,\r\n  \"level_time\": 1722974412,\r\n  \"location\": \"1. Kat - WC\",\r\n  \"deviceNo\": \"NVS-00123\",\r\n  \"coverTime\": 1722974472,\r\n  \"connectionState\": false\r\n}",
+    "time": "2025-08-07T17:37:33.553Z"
+  },
+  {
+    "topic": "stm32/demo",
+    "message": "{\r\n  \"rfid\": \"123456\",\r\n  \"level\": 9,\r\n  \"fill_time\": 1722974417,\r\n  \"level_time\": 1722974412,\r\n  \"location\": \"1. Kat - WC\",\r\n  \"deviceNo\": \"NVS-00123\",\r\n  \"coverTime\": 1722974472,\r\n  \"connectionState\": true\r\n}",
+    "time": "2025-08-07T17:44:51.270Z"
+  },
+  {
+    "topic": "stm32/demo",
+    "message": "{\r\n  \"rfid\": \"398765\",\r\n  \"level\": 55,\r\n  \"fill_time\": 1722974417,\r\n  \"level_time\": 1722974412,\r\n  \"location\": \"1. Kat - WC\",\r\n  \"deviceNo\": \"NVS-00123\",\r\n  \"coverTime\": 1722974472,\r\n  \"connectionState\": true\r\n}",
+    "time": "2025-08-07T17:46:05.569Z"
+  },
+  {
+    "topic": "stm32/demo",
+    "message": "burak",
+    "time": "2025-08-07T18:09:57.681Z"
+  },
+  {
+    "topic": "stm32/demo",
+    "message": "fasfdvaf",
+    "time": "2025-08-07T18:10:07.196Z"
+  },
+  {
+    "topic": "stm32/demo",
+    "message": "ggg",
+    "time": "2025-08-07T18:10:33.332Z"
+  },
+  {
+    "topic": "stm32/demo",
+    "message": "fds",
+    "time": "2025-08-07T18:10:36.705Z"
+  },
+  {
+    "topic": "stm32/demo",
+    "message": "{\r\n  \"rfid\": \"123456\",\r\n  \"level\": 19,\r\n  \"fill_time\": 1722974417,\r\n  \"level_time\": 1722974412,\r\n  \"location\": \"1. Kat - WC\",\r\n  \"deviceNo\": \"NVS-00123\",\r\n  \"coverTime\": 1722974472,\r\n  \"connectionState\": true\r\n}",
+    "time": "2025-08-07T18:13:58.886Z"
+  }
+]
