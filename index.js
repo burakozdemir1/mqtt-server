@@ -86,6 +86,58 @@ app.delete('/api/messages', (req, res) => {
     return res.json({ success: true });
   });
 });
+/* === Send device history report via email === */
+app.post('/report/history', async (req, res) => {
+  try {
+    const { to, items } = req.body;
+    if (!to || !Array.isArray(items)) {
+      return res.status(400).json({ success: false, error: 'Invalid payload: { to, items[] } required.' });
+    }
+
+    // Build a clean HTML report (table)
+    const rows = items.map((it, idx) => `
+      <tr>
+        <td style="padding:8px;border-bottom:1px solid #e5e7eb;">${idx + 1}</td>
+        <td style="padding:8px;border-bottom:1px solid #e5e7eb;">${it.person || '-'}</td>
+        <td style="padding:8px;border-bottom:1px solid #e5e7eb;">${it.level || '-'}</td>
+        <td style="padding:8px;border-bottom:1px solid #e5e7eb;">${it.fillTime || '-'}</td>
+        <td style="padding:8px;border-bottom:1px solid #e5e7eb;">${it.levelTime || '-'}</td>
+      </tr>
+    `).join('');
+
+    const html = `
+      <div style="font-family:ui-sans-serif,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:#0b1220;">
+        <h2 style="margin:0 0 4px 0;">Device History Report</h2>
+        <div style="color:#64748b;margin-bottom:16px;">Smart Soap Dispenser</div>
+        <table style="border-collapse:collapse;width:100%;font-size:14px;">
+          <thead>
+            <tr style="text-align:left;background:#f8fafc;">
+              <th style="padding:10px;border-bottom:1px solid #e5e7eb;">#</th>
+              <th style="padding:10px;border-bottom:1px solid #e5e7eb;">Person</th>
+              <th style="padding:10px;border-bottom:1px solid #e5e7eb;">Level</th>
+              <th style="padding:10px;border-bottom:1px solid #e5e7eb;">Fill Time</th>
+              <th style="padding:10px;border-bottom:1px solid #e5e7eb;">Level Time</th>
+            </tr>
+          </thead>
+          <tbody>${rows}</tbody>
+        </table>
+        <div style="margin-top:16px;color:#64748b;">Report generated at ${new Date().toISOString()}</div>
+      </div>
+    `;
+
+    await transporter.sendMail({
+      from: `Smart Soap Dispenser <${process.env.EMAIL_USER}>`,
+      to,
+      subject: 'Device History Report',
+      html,
+    });
+
+    return res.json({ success: true });
+  } catch (err) {
+    console.error('Failed to send history report email:', err);
+    return res.status(500).json({ success: false, error: 'Failed to send history report email.' });
+  }
+});
 
 /* === Email Verification & Password Reset (in-memory codes) === */
 let verificationCodes = {};
