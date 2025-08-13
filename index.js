@@ -74,6 +74,19 @@ app.get('/api/messages', (req, res) => {
   res.json(mqttMessages);
 });
 
+/* === Clear All MQTT Messages === */
+app.delete('/api/messages', (req, res) => {
+  mqttMessages = [];
+  fs.writeFile(logFilePath, JSON.stringify(mqttMessages, null, 2), (err) => {
+    if (err) {
+      console.error('Failed to clear MQTT log file:', err);
+      return res.status(500).json({ success: false, error: 'Failed to clear messages file.' });
+    }
+    console.log('MQTT messages cleared.');
+    return res.json({ success: true });
+  });
+});
+
 /* === Email Verification & Password Reset (in-memory codes) === */
 let verificationCodes = {};
 let passwordResetCodes = {};
