@@ -42,8 +42,11 @@ if (fs.existsSync(logFilePath)) {
   }
 }
 
-const brokerUrl = 'ws://52.29.86.137:8000/mqtt';
-const client = mqtt.connect(brokerUrl);
+const brokerUrl = process.env.MQTT_WS_URL || 'ws://52.29.86.137:8000/mqtt';
+const client = mqtt.connect(brokerUrl, {
+  protocol: 'ws',
+  reconnectPeriod: 2000,
+});
 
 client.on('connect', () => {
   console.log('Connected to MQTT broker.');
