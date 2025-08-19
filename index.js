@@ -42,7 +42,7 @@ if (fs.existsSync(logFilePath)) {
   }
 }
 
-const brokerUrl = 'ws://35.158.73.126:8000/mqtt';
+const brokerUrl = 'ws://52.29.86.137:8000/mqtt';
 const client = mqtt.connect(brokerUrl);
 
 client.on('connect', () => {
